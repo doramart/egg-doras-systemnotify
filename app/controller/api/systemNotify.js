@@ -47,7 +47,7 @@ let SystemNotifyController = {
                     let userNotifyObj = await ctx.service.systemNotify.item({
                         query: {
                             'id': userNotifyId,
-                            user: ctx.session.user.id
+                            user_id: ctx.session.user.id
                         }
                     })
                     if (!_.isEmpty(userNotifyObj)) {
@@ -85,7 +85,7 @@ let SystemNotifyController = {
      *    "server_time": 1542529985218,
      *    "data": {}
      *}
-     * @apiSampleRequest http://localhost:8080/api/systemNotify/setNoticeRead
+     * @apiSampleRequest http://localhost:10003/api/systemNotify/setNoticeRead
      * @apiVersion 1.0.0
      */
     async setMessageHasRead(ctx, app) {
